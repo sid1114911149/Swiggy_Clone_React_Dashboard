@@ -1,2 +1,2 @@
 // export const API_URL="http://localhost:5500";
-export const API_URL="https://swiggy-clone-backend-t30d.onrender.com";
+export const API_URL="https://swiggy-clone-backend-1-n59v.onrender.com";
