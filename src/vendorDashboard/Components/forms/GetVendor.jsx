@@ -14,10 +14,9 @@ const GetVendor = () => {
       const vendorid = payload.vendorId;
 
       const response = await fetch(
-        `${API_URL}/vendor/getDetails/${vendorid}`,
+        `${API_URL}/vendor/get-details/${vendorid}`,
         {
           headers: {
-            'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`
           }
         }
@@ -72,7 +71,7 @@ const GetVendor = () => {
       });
 
       const response = await fetch(
-        `${API_URL}/vendor/deleteVendor/${vendorId}`,
+        `${API_URL}/vendor/delete/${vendorId}`,
         {
           method: "DELETE",
           headers: {

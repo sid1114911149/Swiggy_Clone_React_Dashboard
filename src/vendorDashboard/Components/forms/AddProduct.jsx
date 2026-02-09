@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { API_URL } from '../../data/apiPath'
-const AddProduct = () => {
+const AddProduct = ({showProductsHandler}) => {
   const [productName, setProductName] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
@@ -48,6 +48,7 @@ const AddProduct = () => {
         alert('Product is Created Successfully');
         console.log(data);
       }
+      showProductsHandler();
     } catch (error) {
       console.error(error);
       alert(`Product is Not Created `);

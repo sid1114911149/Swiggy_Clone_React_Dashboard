@@ -24,7 +24,7 @@ const NavBar = ({ showLoginHandler, showRegisterHandler, showLogout, showLogoutH
             const vendorid = payload.vendorId;
 
             const response = await fetch(
-                `${API_URL}/vendor/getDetails/${vendorid}`,
+                `${API_URL}/vendor/get-details/${vendorid}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`

@@ -157,8 +157,8 @@ const LandingPage = () => {
                         showFirmsHandler={showFirmsHandler} showProductsHandler={showProductsHandler}
                         showVendorHandler={showVendorHandler} />} 
                         
-                    {showLogin && <Login showWelcomeHandler={showWelcomeHandler} />}
                     {showRegister && <Register showLoginHandler={showLoginHandler} />}
+                    {showLogin && <Login showWelcomeHandler={showWelcomeHandler} />}
                     {showAddFirm && <AddFirm showFirmsHandler={showFirmsHandler} />}
                     {showFirms && <GetFirms showProductsHandler={showProductsHandler}/>}
                     {showWelcome && <Welcome />}

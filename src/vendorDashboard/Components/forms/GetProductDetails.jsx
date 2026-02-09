@@ -23,7 +23,7 @@ const GetProductDetails = ({ showProductDetails }) => {
             );
 
             if (!response.ok) {
-                const text = await response.text(); 
+                const text = await response.text();
                 console.error("Backend error:", text);
                 return;
             }
@@ -63,11 +63,14 @@ const GetProductDetails = ({ showProductDetails }) => {
                         <td>{details.price}</td>
                         <td>{details.bestseller ? "Yes" : "No"}</td>
                         <td>
-                            {details.category?.length
+                            {Array.isArray(details.category)
                                 ? details.category.map((item, index) => (
                                     <div key={index}>{item}</div>
                                 ))
-                                : "—"}
+                                : details.category
+                                    ? <div>{details.category}</div>
+                                    : "—"}
+
                         </td>
 
                         <td>
