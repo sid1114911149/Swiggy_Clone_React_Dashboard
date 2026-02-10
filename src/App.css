@@ -301,3 +301,141 @@ button:hover {
   align-items: center;
   transition:all;
 }
+
+/* ===============================
+   MOBILE & SMALL SCREENS
+================================ */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navSection {
+    flex-direction: column;
+    height: auto;
+    gap: 0.6rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .userAuth {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .userAuth span {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  /* Layout */
+  .collectionSection {
+    flex-direction: column;
+    margin: 0.5rem;
+  }
+
+  /* Sidebar → Horizontal Scroll Menu */
+  .sideBarSection {
+    width: 100%;
+    height: auto;
+    padding: 0.6rem;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+
+  .sideBarSection ul {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .sideBarSection ul li {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+  }
+
+  .sideBarSection ul li:hover {
+    transform: none;
+  }
+
+  /* Main Sections */
+  .LoginSection,
+  .registerSection,
+  .firmSection,
+  .productSection {
+    margin-left: 0; /* 🔥 important fix */
+    padding: 1.2rem;
+  }
+
+  /* Forms */
+  .AuthForm,
+  .tableForm {
+    max-width: 100%;
+  }
+
+  .AuthForm input,
+  .tableForm input {
+    max-width: 100%;
+  }
+
+  .AuthForm label,
+  .tableForm label {
+    font-size: 0.85rem;
+  }
+
+  /* Checkboxes */
+  .checkboxContainer {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.6rem;
+  }
+
+  .checkboxSection {
+    min-width: auto;
+    font-size: 0.8rem;
+  }
+
+  /* Tables → Scrollable */
+  .product-table,
+  .firm-table,
+  .vendor-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Buttons */
+  button {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+
+  /* Page Not Found */
+  .pageNotFound {
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+/* ===============================
+   EXTRA SMALL DEVICES
+================================ */
+@media (max-width: 480px) {
+
+  .navSection {
+    font-size: 1.1rem;
+  }
+
+  .sideBarSection ul li {
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+}
